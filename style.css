@@ -1,0 +1,739 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins',sans-serif;
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+	display: none;
+
+}
+/* jumbroton */
+.jumbotron {
+    background-image: url(img/wall.jpg);
+    background-size: cover;
+    height: 540px;
+    text-align: center;
+    position: relative;
+}
+/* .jumbotron img {
+    padding-top: 80px;
+    padding-bottom: 10px ;
+    width: 150px; 
+    margin: 10px;
+    user-select: none;
+} */
+
+/* Penyesuaian judul */
+.jumbotron h2 {
+    margin-top: 10px; /* Atur jarak dari logo */
+    font-weight: bold; /* Beratkan huruf pada judul */
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+.jumbotron .container h2 span{
+    font-weight: bold;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(50, 205, 50, 1), rgba(0, 0, 0, 0.2));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .display-4 {
+    color: white;
+    margin-top: 10px;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    font-style: 40px;
+    margin-bottom: 30px;
+}
+
+.jumbotron .display-4 span {
+    font-weight: bold;
+}
+.modal {
+	margin-top: 50px;
+	/* Sesuaikan nilai ini sesuai dengan kebutuhan Anda */
+}
+
+.my-custom-modal {
+	margin-top: 50px;
+	/* Sesuaikan nilai ini sesuai dengan kebutuhan Anda */
+}
+/* kotak info panel */
+.info-panel {
+    background-color: white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -170px;
+    padding: 50px;
+}
+
+.info-panel img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    user-select: none;
+}
+
+.info-panel h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.info-panel p {
+    font-size: 12px;
+    color: #ACACAC;
+    margin-top: -5px;
+
+}
+.link-custom {
+    text-decoration: none !important;
+    color: black ;
+}
+.link-custom:hover{
+    color: royalblue ;
+}
+
+.table-data{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+/* Navbar */
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 2% 0px 2%;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #32CD32;
+	transition: top 0.5s;
+	top: -70px;
+	border-bottom: 2px solid white !important;
+}
+.logo {
+	font-size: 18px;
+	font-weight: 700;
+	text-decoration: none;
+	color: white;
+	margin-top: 0;
+	
+}
+nav ul {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+nav ul li{
+	display: inline;
+	margin-right: 10px;
+	list-style-type: none;
+
+}
+nav ul li a{
+	font-size: 15px;
+	text-decoration: none;
+	color: white;
+	padding: 6px 30px;
+	border-radius: 20px;
+}
+.icon{
+	margin-top: 0px;
+}
+.list{
+	display: none;
+}
+
+.icon a{
+	color: white;
+	border: 1px solid white ;
+	padding: 6px 20px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+.icon a:hover{
+	color: #32CD32;
+	background-color: white;
+	transition: 0.4s;
+	box-shadow: 0 0 10px 0 white;
+}
+.navbar a:hover{
+	color: #32CD32;
+	background-color: white;
+	font-weight: bold;
+}
+
+/* Navbar Sticky */
+nav.sticky{
+	background: #32CD32 !important;
+	color: white;
+	border-bottom: 2px solid red;
+
+}
+nav.sticky .icon{
+	margin-top: 0;
+}
+nav.sticky ul{
+	text-decoration: none;
+}
+nav.sticky li a{
+	color: white;
+	text-decoration: none;
+}
+nav.sticky .icon a{
+	color: white;
+	border: 1px solid white ;
+}
+.navbar li a:hover{
+	color: #32CD32;
+	background-color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+nav.sticky .icon a:hover{
+	color: #32CD32;
+	background-color: white;
+	transition: 0.4s;
+	box-shadow: 0 0 10px 0 white, 0 0 10px 0 white;
+}
+
+
+
+
+/* Content */
+main {
+	padding: 20px;
+	overflow: auto;
+	border-top: 5px solid white;
+}
+
+.card {
+	padding: 50px 20px;
+}
+.card h2{
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+	color: white;
+}
+.box-produk{
+	display: flex;
+	margin-top: 30px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+h1{
+	font-size: 35px;
+	color: #32CD32;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.linkprofil{
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	transition: transform 0.3s ease-in-out;	
+
+}
+.linkprofil a{
+	color: white;
+	background-color: #32CD32;
+	border-radius: 10px;
+	border: 3px solid #32CD32;
+	padding: 8px 30px;
+	text-decoration: none;
+}
+.linkprofil:hover{
+	transform: translateY(-5px); /* Sesuaikan sejauh mana gambar akan bergerak ke atas */
+  }
+.linkprofil a:hover{
+	box-shadow: 0 5px 10px 0 gray;
+  }
+
+/* Aplikasi */
+#aplikasi{
+	background-color: #f9f6f2;
+	border-color: #f9f6f2;
+}
+#aplikasi .mini-produk{
+	margin-bottom: 20px;
+	border: 2px solid #e2e2e2;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 250px;
+	text-align: center;
+	margin-top: 5px;
+    height: 270px; /* Tambahkan tinggi yang sesuai dengan kebutuhan Anda */
+    position: relative;
+	background-color: #ffffff;
+}
+.aplikasi .img-produk{
+	width: 100px; /* Sesuaikan ukuran sesuai kebutuhan */
+  	height: 100px; /* Sesuaikan ukuran sesuai kebutuhan */
+  	object-fit: contain; /* Sesuaikan properti sesuai kebutuhan */
+	padding-top: 30px;
+}
+.aplikasi .mini-produk p{
+	padding: 10px 20px 20px ;
+	cursor: default;
+	
+}
+.aplikasi .mini-produk:hover{
+	transform: translateY(-15px);
+	border: 2px solid #32CD32;
+}
+.aplikasi .linkprofil{
+	margin-bottom: 30px;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* faskes */
+#faskes{
+	border-color: white;
+}
+
+.btnmap{
+	color: white;
+	background-color: #32CD32;
+	border-radius: 10px;
+	border: 3px solid #32CD32;
+	padding: 5px;
+}
+#map {
+	height: 400px;
+	width: 50%;
+	margin: 20px auto; /* Center the map horizontally */
+	display: none; /* Hide the map initially */
+	border-radius: 10px;
+}
+.faskes1 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+.cardfaskes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 300px;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+	color: #ffffff;
+	font-size: 18px; /* Adjust the font size as needed */
+	font-weight: bold; /* Make the text bold */
+	cursor: pointer;
+
+}
+
+.cardfaskes i {
+	font-size: 24px;
+	margin-top: 15px;
+	color: #ffffff;
+}
+
+.cardfaskes h3 {
+	font-size: 30px; /* Adjust the font size for the heading */
+	margin: 10px 0; /* Add margin to the heading for spacing */
+	font-weight: bold;
+}
+
+.cardfaskes p {
+	font-size: 16px; /* Adjust the font size for the paragraph */
+	margin: 10px 0; /* Add margin to the paragraph for spacing */
+}
+
+.apotek {
+	background-image: url('https://media.istockphoto.com/id/872542388/id/foto/pola-batik-biru.jpg?s=170667a&w=0&k=20&c=5AVveciNE-sgDQy-MpVVQk8FNiYF1Cy-8I9lsvAdCXs='); /* Replace with your actual apotek batik image */
+}
+
+.klinik {
+	background-image: url('https://static.vecteezy.com/system/resources/thumbnails/035/223/422/small/red-tribal-geometric-fabric-design-pattern-free-vector.jpg'); /* Replace with your actual klinik batik image */
+}
+
+.puskesmas {
+	background-image: url('https://img.freepik.com/premium-vector/beautiful-green-art-with-linear-floral-pattern_76645-131.jpg'); /* Replace with your actual puskesmas batik image */
+}
+.cardfaskes:hover {
+	transform: scale(1.05);
+}
+#detailTable {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	overflow-x: auto;
+}
+
+#dataTable {
+	width: 70%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin: 0 auto; /* Center the table */
+}
+
+#dataTable th,
+#dataTable td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+}
+
+#dataTable th {
+	background-color: #f2f2f2;
+}  
+.custom-modal-dialog {
+	margin-top: 100%; /* Adjust this value as needed */
+}
+body {
+  font-family: Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+
+/* Satu Data */
+#data{
+	border-color: white;
+}
+.judulfile{
+	cursor: pointer;
+}
+
+/* media */
+#media{
+	background-color: #f9f6f2;
+	border-color: #f9f6f2; 
+}
+.bisnis .mini-produk{
+	border: 2px solid #e2e2e2;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 250px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	background-color: #ffffff;
+}
+.bisnis .img-produk{
+	width: 100px;
+	max-height: 220px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.bisnis .mini-produk p{
+	padding: 5px 20px ;
+	cursor: default;
+	font-weight: bold;
+}
+.bisnis .mini-produk:hover{
+	transform: translateY(-15px);
+	border: 2px solid #32CD32;
+}
+.bisnis h4{
+	cursor: default;
+	font-weight: bold;
+	font-size: 17px;
+}
+.bisnis h4:hover{
+	color: #32CD32;
+}
+.bisnis .linkprofil{
+	margin-bottom: 30px;
+}
+
+
+/* Footer */
+footer {
+	padding: 15px 0 0 0;
+	color: white;
+	text-align: center;
+	background-color: #32CD32;
+	overflow: hidden;
+}
+
+/* Button Scroll Atas */
+#progres{
+	background-color: #32CD32;
+	position: fixed;
+	bottom: 20px;
+	right: 15px;
+	height: 60px;
+	width: 60px;
+	display: none;
+	place-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+#progres-isi{
+	display: block;
+	width: calc(100% - 15px);
+	height: calc(100% - 15px);
+	background-color: white;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 30px;
+	color: #32CD32;
+}
+#progress{
+	position: fixed;
+	bottom: 80px;
+	right: 15px;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+}
+#progress a{
+	color: #32CD32;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.naga dotlottie-player{
+	position: absolute;
+	left: 10px ;
+}
+.rocket dotlottie-player{
+	position: absolute;
+	right: 10px;
+}
+
+.carousel-item {
+	transition: transform 1s ease;
+	/* Efek transisi menggunakan properti transform */
+}
+
+.carousel-inner {
+	overflow: hidden;
+	/* Mengatur agar konten di dalamnya tersembunyi jika melebihi ukuran parent */
+}
+
+
+@media screen and (max-width: 1000px) {
+	html {
+		font-size: 80%;
+	}
+	header{
+		min-height: 40vh;
+	}
+	.imgprofil , .isiprofil {
+		width: 100%;
+		padding: 0;
+	}
+	.imgprofil img{
+		width: 80%;
+	}
+	nav{
+		border-bottom: 4px solid #e2e2e2;
+		padding: 5px 5% 5px 5%;
+	}
+	.navbar {
+		position: absolute;
+		top: 100%;
+		right: -50%;
+		background-color: #32CD32;
+		width: 35%;
+		
+		transition: 0,1s;
+		border-left: 5px solid #e2e2e2;
+		color: #32CD32;
+		padding-bottom: 70vh;
+		
+	}
+	
+	.navbar ul  {
+		top: -100px;
+	}
+	.navbar.active {
+		right: 0;
+	}
+	.navbar a {
+		display: block;
+		margin:10px;
+		padding: 5px ;
+		text-align: center;
+		margin-left: 20px;
+	}
+	.list{
+		display: inline-block;
+		padding-left: 0;
+		padding-right: 0;
+		margin-right: -15px;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.judul {
+		font-size: 15px;
+	}
+
+	.card h2{
+		font-size: 30px;
+	}
+	header{
+		min-height: 40vh;
+	}
+	.logo{
+		width: 300px;
+		padding: 5px 1px;
+		margin-left: -20px;
+	}
+	
+}
+@media screen and (max-width: 600px) {
+	.box{
+		display: block;	
+	}
+	header{
+		min-height: 27vh;
+	}
+	.minibox{
+		width: 90%;}
+
+	.judul{
+		padding: 70px 0;
+	}
+	.judul h1, .judul p, h1{
+		font-size: 30px;
+	}
+	.aplikasi .mini-produk p, .bisnis .mini-produk p{
+		font-size: 15px;
+	}
+	#progress{
+		bottom: 40px;
+		right: 10px;
+		width: 80px;
+	}
+	dotlottie-player{
+		display: none;
+	}
+	.logo{
+		width: 300px;
+		padding: 5px 1px;
+		margin-left: -20px;
+	}
+	footer{
+		padding-bottom: 10px;
+	}
+	#map{
+		width: 80%;
+	}
+	#aplikasi{
+	height: auto;
+	max-height: 1050px;
+	overflow-y: auto;
+	}
+}
+
+
+/* untuk ukuran layar desktop */
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link {
+    color: white !important;
+    tab-size: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+
+    /* ketika menu aktif */
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0B63DC;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .jumbotron {
+        margin-top: -75px;
+        height: 640px;
+    }
+
+    .jumbotron .display-4 {
+        font-style: 62px;
+    }
+
+    .konten {
+        text-align: left;
+    }
+
+    .testimonial h5 {
+        font-size: 32px;
+    }
+	
+}
+
+
+/* Untuk ukuran layar sedang */
+@media screen and (max-width: 800px) {
+    .img-slide {
+        width: 300px !important;
+        margin-top: 80px !important;
+    }
+    .img-slideutama{
+        width: 100px !important;
+    }
+    .jumbotron .display-4 {
+        font-size: 20px !important; /* Ukuran font judul di layar sedang */
+    }
+	.info-panel {
+		margin-bottom: -150px;
+	}
+}
